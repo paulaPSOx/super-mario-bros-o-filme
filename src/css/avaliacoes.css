@@ -1,0 +1,259 @@
+* {
+    scrollbar-width: thin; 
+    scrollbar-color: #ffd900 #1e4dce;
+}
+
+body {
+    background-color: #ffd900;
+    color: #333;
+}
+
+h1, h2 {
+    color: #0d47a1;
+    margin: 5px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a, button {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+p, li {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.elenco li {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.elenco i {
+    margin-right: 8px;
+}
+
+.cabecalho {
+    background-color: #1e4dce;
+}
+
+.menu li a:hover {
+    color: #ffd900;
+}
+
+.container {
+    max-width: 1200px;
+    width: 97%;
+    margin: 10px auto 0;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#avaliacao-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px auto 10px;
+    padding: 15px;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    width: 95%;
+}
+
+#avaliacao-form input,
+#avaliacao-form textarea,
+#avaliacao-form select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#avaliacao-form button {
+    background-color: #0d47a1;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#avaliacao-form button:hover {
+    background-color: #1565c0;
+}
+
+#avaliacao-form textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.comentario-container {
+    background-color: #f9f9f9;
+    border-left: 4px solid #1e4dce;
+    padding: 10px;
+    margin: 20px auto 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    width: 95%; 
+}
+
+.comentario-texto {
+    color: #555;
+    word-wrap: break-word; 
+    line-height: 1.6;
+}
+
+.comentario-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.nome-usuario {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.nota-usuario {
+    font-size: 0.9em;
+    color: #ff9800;
+}
+
+footer {
+    color: #777;
+}
+
+footer a.github-link {
+    color: #1e4dce;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+footer a.github-link:hover {
+    color: #004080;
+    text-decoration: underline;
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.star-rating .fas {
+    transition: color 0.2s ease-in-out;
+}
+
+.star-rating .selected,
+.star-rating .hover {
+    color: #ffc107;
+}
+
+.mario-block {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    cursor: pointer;
+    animation: floatBlock 2s infinite ease-in-out;
+    z-index: 1000;
+}
+
+.mario-block img {
+    width: 100%;
+}
+
+.coin {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: coinAnimation 0.5s forwards;
+    z-index: 1001;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatBlock {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes coinAnimation {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -100px);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    .cabecalho .logo {
+        margin-bottom: 20px;
+        width: 100px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 340px) {
+    .container {
+        padding: 5px;
+    }
+
+    #avaliacao-form input,
+    #avaliacao-form textarea,
+    #avaliacao-form select {
+        font-size: 5px; 
+    }
+
+    #avaliacao-form button {
+        font-size: 16px;
+    }
+}

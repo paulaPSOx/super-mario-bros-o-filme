@@ -1,0 +1,178 @@
+* {
+    scrollbar-width: thin; 
+    scrollbar-color: #3bb3ff #F534A4;
+}
+
+ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+h1 {
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+body {
+    background-color: #F534A4; 
+    color: #000;
+}
+
+.menu li a:hover {
+    color: #3bb3ff;
+}
+
+.container {
+    background-color: #3bb3ff;
+    border-radius: 50px;
+    box-shadow: 0px 1px 6px 6px #ffd900;
+    max-width: 620px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    margin: 5px;
+}
+
+.card .inner-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card .front-face, .card .back-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.card .front-face {
+    background-color: #ffd900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.card .back-face {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .front-face {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .back-face {
+    transform: rotateY(0);
+}
+
+button {
+    background-color: #ff006a;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+button:hover {
+    background-color: #ffd900;
+}
+
+footer {
+    color: #d7dce4;
+}
+
+footer a.github-link {
+    color: #3bb3ff;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+footer a.github-link:hover {
+    color: #004080;
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    .cabecalho .logo {
+        margin-bottom: 20px;
+        width: 120px;
+    }
+
+    .menu-item {
+        font-size: 4vw;
+    }
+
+    .container {
+        max-width: 90vw;
+        padding: 5vw;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .card {
+        width: 16vw;
+        height: 16vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 5vw;
+        width: 95vw;
+    }
+
+    .card {
+        width: 15vw;
+        height: 15vw;
+    }
+}
+
+@media (max-width: 376px) {
+    .container {
+        padding: 5vw;
+    }
+
+    .card {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    button {
+        font-size: 3vw;
+        padding: 2vw;
+    }
+}

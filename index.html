@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="icon" type="image/png" href="./src/imagens/logo-mario.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@100;300;500&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <title>Super Mario Bros - O filme</title>
+</head>
+
+<body>
+    <div class="fundo-video">
+        <video class="video" autoplay loop muted>
+            <source src="./src/video/video-mario.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header class="cabecalho">
+        <a href="#">
+            <img class="logo" src="./src/imagens/logo-mario.png" alt="Logo do Mario" />
+        </a>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="index.html" class="menu-item">
+                        <i class="fas fa-home"></i>
+                        <span class="menu-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="personagens.html" class="menu-item">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-text">Personagens</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="jogo.html" class="menu-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="menu-text">Jogo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="avaliacoes.html" class="menu-item">
+                        <i class="fas fa-star"></i>
+                        <span class="menu-text">Avaliações</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="informacoes">
+            <img class="imagem-titulo" src="./src/imagens/titulo.png" alt="Título do filme" />
+            <p class="descricao">
+                Mario e seu irmão Luigi são encanadores do Brooklyn, em Nova York. Um dia, eles vão parar no reino dos cogumelos, governado pela Princesa Peach. O local é ameaçado por Bowser, rei dos Koopas, que faz de tudo para conseguir reinar em todos os lugares.
+            </p>
+            <button class="botao-trailer">Assista agora o trailer</button>
+        </div>
+
+        <img class="mario" src="./src/imagens/super-mario-chars.png" alt="Personagens do Mario" />
+
+        <div class="modal">
+            <div class="conteudo-modal">
+                <span class="fechar-modal">X</span>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Cb4WV4aXBpk" title="Trailer oficial" frameborder="1"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div id="mario-block" class="mario-block">
+            <img src="src/imagens/mario-block.png" alt="Bloco do Mario" />
+            <div id="coin" class="coin" style="display: none;">
+                <img src="src/imagens/coin.png" alt="Moeda" />
+            </div>
+            <audio id="mario-coin-sound" src="src/sounds/mario_coin_sound.mp3"></audio>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 <a href="https://github.com/paulaPSOx" target="_blank" class="github-link">PaulaPSOx</a>. Todos os direitos reservados.</p>
+    </footer>    
+
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>

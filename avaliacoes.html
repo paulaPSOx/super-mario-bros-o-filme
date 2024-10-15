@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/avaliacoes.css">
+    
+    <link rel="icon" type="image/png" href="./src/imagens/logo-blue-toad.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@100;300;500&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <title>Avaliações - Super Mario Bros</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="index.html" aria-label="Voltar para a página inicial">
+            <img class="logo" src="./src/imagens/logo-blue-toad.png" alt="Logo Toad Azul" />
+        </a>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="index.html" class="menu-item">
+                        <i class="fas fa-home"></i>
+                        <span class="menu-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="personagens.html" class="menu-item">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-text">Personagens</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="jogo.html" class="menu-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="menu-text">Jogo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="avaliacoes.html" class="menu-item">
+                        <i class="fas fa-star"></i>
+                        <span class="menu-text">Avaliações</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1><i class="fas fa-film"></i> Avaliações do Filme<p>Super Mario Bros - O filme</p></h1>
+
+        <section class="filme-info">
+            <h2><i class="fas fa-info-circle"></i> Informações do Filme</h2>
+            <p><strong>Título:</strong> Super Mario Bros.</p>
+            <p><strong>Direção:</strong> Aaron Horvath, Michael Jelenic</p>
+            <p><strong>Gênero:</strong> Animação, Aventura, Comédia</p>
+            <p><strong>Duração:</strong> 92 minutos</p>
+            <p><strong>Estreia:</strong> 5 de Abril de 2023</p>
+        </section>
+
+        <section class="elenco">
+            <h2><i class="fas fa-users"></i> Elenco</h2>
+            <ul>
+                <li><i class="fas fa-user"></i> Chris Pratt como Mario</li>
+                <li><i class="fas fa-user"></i> Anya Taylor-Joy como Princesa Peach</li>
+                <li><i class="fas fa-user"></i> Charlie Day como Luigi</li>
+                <li><i class="fas fa-user"></i> Jack Black como Bowser</li>
+                <li><i class="fas fa-user"></i> Seth Rogen como Donkey Kong</li>
+                <li><i class="fas fa-user"></i> Keegan-Michael Key como Toad</li>
+            </ul>
+        </section>
+
+        <section class="sinopse">
+            <h2><i class="fas fa-scroll"></i> Sinopse</h2>
+            <p>
+                Mario, um encanador do Brooklyn, embarca em uma aventura épica pelo Reino dos Cogumelos para resgatar seu irmão Luigi e enfrentar o terrível Bowser. Ao lado da Princesa Peach, ele vive uma jornada cheia de desafios e conquistas para salvar o reino.
+            </p>
+        </section>
+
+        <section class="recepcao">
+            <h2><i class="fas fa-thumbs-up"></i> Recepção Crítica</h2>
+            <p><strong>Avaliação no Rotten Tomatoes:</strong> 59%</p>
+            <p><strong>Avaliação no IMDb:</strong> 7.1/10</p>
+            <p><strong>Prêmios:</strong> Indicado para Melhor Animação no Annie Awards</p>
+        </section>
+
+        <section class="bilheteria">
+            <h2><i class="fas fa-dollar-sign"></i> Bilheteria</h2>
+            <p><strong>Bilheteria de Estreia:</strong> $204 milhões (EUA)</p>
+            <p><strong>Bilheteria Total:</strong> $1.35 bilhões (global)</p>
+        </section>
+
+        <section class="tecnicos">
+            <h2><i class="fas fa-cogs"></i> Detalhes Técnicos</h2>
+            <p><strong>Orçamento:</strong> $100 milhões</p>
+            <p><strong>Tecnologias Usadas:</strong> Animação digital, CGI avançado</p>
+            <p><strong>Trilha Sonora:</strong> Brian Tyler, com participação de Koji Kondo (criador das trilhas dos jogos)</p>
+        </section>
+
+        <section class="avaliacao-form">
+            <form id="avaliacao-form">
+                <h2><i class="fas fa-pen"></i> Deixe sua Avaliação</h2>
+                <label for="nome"><i class="fas fa-user"></i> Nome:</label>
+                <input type="text" id="nome" name="nome" required maxlength="30" />
+
+                <label for="comentario"><i class="fas fa-comment"></i> Comentário:</label>
+                <textarea id="comentario" name="comentario" required maxlength="50"></textarea>
+
+                <label><i class="fas fa-star"></i> Nota:</label>
+                <div id="star-rating" class="star-rating">
+                    <i class="fas fa-star" data-value="1"></i>
+                    <i class="fas fa-star" data-value="2"></i>
+                    <i class="fas fa-star" data-value="3"></i>
+                    <i class="fas fa-star" data-value="4"></i>
+                    <i class="fas fa-star" data-value="5"></i>
+                </div>
+                <input type="hidden" id="nota" name="nota" required />
+
+                <button type="submit"><i class="fas fa-paper-plane"></i> Enviar Avaliação</button>
+            </form>
+
+            <div id="comentarios"></div>
+            <audio id="resposta-enviada-sound" src="./src/sounds/resposta-enviada.mp3"></audio>
+
+            <div id="mario-block" class="mario-block">
+                <img src="src/imagens/mario-block.png" alt="Bloco do Mario" />
+                <div id="coin" class="coin" style="display: none;">
+                    <img src="src/imagens/coin.png" alt="Moeda" />
+                </div>
+                <audio id="mario-coin-sound" src="src/sounds/mario_coin_sound.mp3"></audio>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 <a href="https://github.com/paulaPSOx" target="_blank" class="github-link">PaulaPSOx</a>. Todos os direitos reservados.</p>
+    </footer>  
+
+    <script src="./src/js/avaliacoes.js"></script>
+</body>
+</html>

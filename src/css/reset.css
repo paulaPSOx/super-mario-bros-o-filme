@@ -1,0 +1,124 @@
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e4dce;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff0021;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e6001d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease;
+    margin-bottom: 2px;
+}
+
+.menu-text {
+    display: block;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item:hover .menu-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-item i {
+    font-size: 22px;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.cabecalho .logo {
+    width: 99px;
+    transition: transform 0.3s;
+}
+
+.cabecalho .logo:hover {
+    transform: scale(1.1);
+}
+
+.cabecalho .menu {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.cabecalho .menu li {
+    list-style: none;
+}
+
+.cabecalho nav li {
+    margin: 0;
+}
+
+.menu li a {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.cabecalho nav li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    font-size: 14px; 
+    overflow: hidden;
+}

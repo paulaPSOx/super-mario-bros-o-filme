@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/css/personagens.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="icon" type="image/png" href="./src/imagens/logo-luigi.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@100;300;500&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <title>Personagens - Super Mario Bros</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="index.html" aria-label="Voltar para a página inicial">
+            <img class="logo" src="./src/imagens/logo-luigi.png" alt="Logo Luigi" />
+        </a>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="index.html" class="menu-item">
+                        <i class="fas fa-home"></i>
+                        <span class="menu-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="personagens.html" class="menu-item">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-text">Personagens</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="jogo.html" class="menu-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="menu-text">Jogo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="avaliacoes.html" class="menu-item">
+                        <i class="fas fa-star"></i>
+                        <span class="menu-text">Avaliações</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1><i class="fas fa-users"></i> Personagens</h1>
+        <section class="personagens">
+            <article data-sound="./src/sounds/01-mario.mp3">
+                <img src="./src/imagens/mario.png" alt="Mario">
+                <h2>Mario</h2>
+                <p>O herói do reino dos cogumelos, sempre pronto para salvar a princesa Peach.</p>
+            </article>
+            <article data-sound="./src/sounds/02-luigi.mp3">
+                <img src="./src/imagens/luigi.png" alt="Luigi">
+                <h2>Luigi</h2>
+                <p>O irmão de Mario, corajoso e leal, sempre ao lado de Mario em suas aventuras.</p>
+            </article>
+            <article data-sound="./src/sounds/03-peach.mp3">
+                <img src="./src/imagens/peach.png" alt="Peach">
+                <h2>Princesa Peach</h2>
+                <p>A governante do reino dos cogumelos, sempre protegida pelos irmãos Mario e Luigi.</p>
+            </article>
+            <article data-sound="./src/sounds/04-bowser.mp3">
+                <img src="./src/imagens/bowser.png" alt="Bowser">
+                <h2>Bowser</h2>
+                <p>O terrível rei dos Koopas, que busca conquistar o reino dos cogumelos.</p>
+            </article>
+            <article data-sound="./src/sounds/05-toad.mp3">
+                <img src="./src/imagens/toad.png" alt="Toad">
+                <h2>Toad</h2>
+                <p>Um fiel servo do reino dos cogumelos, sempre disposto a ajudar os heróis em suas aventuras.</p>
+            </article>
+            <article data-sound="./src/sounds/06-koopa.mp3">
+                <img src="./src/imagens/koopa.png" alt="Koopa">
+                <h2>Koopa</h2>
+                <p>Um dos capangas de Bowser, conhecido por sua concha dura e astúcia.</p>
+            </article>
+            <article data-sound="./src/sounds/07-goomba.mp3">
+                <img src="./src/imagens/goomba.png" alt="Goomba">
+                <h2>Goomba</h2>
+                <p>Um inimigo clássico do Mario, sempre pronto para causar problemas.</p>
+            </article>
+            <article data-sound="./src/sounds/08-yoshi.mp3">
+                <img src="./src/imagens/yoshi.png" alt="Yoshi">
+                <h2>Yoshi</h2>
+                <p>Um dinossauro leal e amigo de Mario, que ajuda em várias aventuras.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 <a href="https://github.com/paulaPSOx" target="_blank" class="github-link">PaulaPSOx</a>. Todos os direitos reservados.</p>
+    </footer>  
+
+    <script src="./src/js/personagens.js"></script>
+</body>
+
+</html>
