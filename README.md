@@ -114,7 +114,7 @@ super-mario-bros-o-filme/
 
 A página inicial foi inspirada no visual do jogo Super Mario Bros, utilizando cores vibrantes e elementos característicos. Abaixo está uma captura de tela do modelo de inspiração:
 
-![Modelo de Inspiração - Página Inicial](https://user-images.githubusercontent.com/108991648/213331544-7db5e33f-9b20-4acd-a0ec-6e408f474ceb.png)
+![Inspiração Mario](mario-img-inspiracao(0).png)
 
 ---
 
