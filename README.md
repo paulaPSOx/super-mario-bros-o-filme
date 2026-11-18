@@ -1,388 +1,267 @@
- <div align="center">
-
-  <!-- STATUS E INFORMAÇÕES DO REPOSITÓRIO -->
-
-  ![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge&logo=checkmarx&logoColor=white)
-  ![License](https://img.shields.io/github/license/paulaPSOx/super-mario-bros-o-filme?style=for-the-badge&color=FBD000&labelColor=002677)
-  ![Last Commit](https://img.shields.io/github/last-commit/paulaPSOx/super-mario-bros-o-filme?style=for-the-badge&color=181717)
-
-  <br>
-
-  # 🍄 Super Mario Bros. — O Filme
-
-  ### Interactive Web Experience
-
-  **Uma experiência interativa que combina desenvolvimento front-end, elementos multimídia e lógica de programação em JavaScript.**
-
-  Desenvolvido com HTML5 semântico, CSS3 modular e JavaScript Vanilla, explorando recursos nativos do navegador para criar uma aplicação temática com diferentes experiências de interação.
-
-  <br>
-
-  <a href="https://paulapsox.github.io/super-mario-bros-o-filme/index.html">
-    <img src="https://img.shields.io/badge/⚡_ACESSAR_APLICAÇÃO-E52521?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Acessar aplicação">
-  </a>
-  <a href="https://github.com/paulaPSOx/super-mario-bros-o-filme">
-    <img src="https://img.shields.io/badge/VER_REPOSITÓRIO-002677?style=for-the-badge&logo=github&logoColor=white" alt="Ver repositório">
-  </a>
-
-  <br><br>
-
-  <img src="https://skillicons.dev/icons?i=html,css,js" alt="HTML5, CSS3 e JavaScript">
-
-  <br><br>
-
-  <img src="./img-super-mario-bros/super-mario-bros-home.png" alt="Interface principal do projeto Super Mario Bros - O Filme" width="100%">
-
-</div>
-
----
-
-## 📌 Índice
-
-- [Visão Geral](#-visão-geral)
-- [Objetivos Técnicos](#-objetivos-técnicos)
-- [Funcionalidades](#-funcionalidades)
-- [Destaques de Engenharia](#-destaques-de-engenharia)
-- [Soluções Técnicas](#-soluções-técnicas)
-- [Demonstração Visual](#-demonstração-visual)
-- [Tecnologias e Recursos](#️-tecnologias-e-recursos)
-- [Execução Local](#️-execução-local)
-- [Arquitetura de Diretórios](#-arquitetura-de-diretórios)
-- [Organização do Código](#-organização-do-código)
-- [Aprendizados](#-aprendizados)
-- [Testes e Validações](#-testes-e-validações)
-- [Roadmap](#-roadmap-de-evolução)
-- [Licença](#-licença-e-propriedade-intelectual)
-- [Autora](#-autora)
-
----
-
-## 📖 Visão Geral
-
-O **Super Mario Bros. — O Filme** é uma aplicação front-end temática inspirada no universo de Super Mario. O projeto reúne diferentes páginas e funcionalidades interativas em uma experiência desenvolvida inteiramente no lado do cliente (*client-side*).
-
-A proposta foi explorar recursos fundamentais do desenvolvimento web, integrando estruturação semântica, estilização, manipulação do DOM, eventos JavaScript e elementos multimídia.
-
-A aplicação está organizada em quatro módulos:
-
-1. **Página Inicial:** apresentação visual com vídeo de fundo, navegação, modal para exibição do trailer e interação com um bloco de moedas.
-
-2. **Galeria de Personagens:** apresentação de oito personagens com reprodução de efeitos sonoros acionados por eventos de clique.
-
-3. **Jogo da Memória:** jogo com 16 cartas, oito pares, embaralhamento inicial, identificação de combinações e controle das jogadas.
-
-4. **Sistema de Avaliações:** formulário interativo com seleção de estrelas, validação de informações e exibição dinâmica dos comentários enviados.
-
-O projeto foi desenvolvido como parte de um desafio da comunidade **[Dev Em Dobro](https://github.com/devemdobro)** e da **Guild Dev Em Dobro**.
-
-> 💡 **Diferencial:** a aplicação integra diferentes experiências em páginas independentes, utilizando JavaScript para controlar interações, elementos dinâmicos, reprodução de áudio e lógica de jogo, sem depender de frameworks JavaScript.
-
-## 🎯 Objetivos Técnicos
-
-- Aplicar conceitos de HTML5 na estruturação de páginas e elementos multimídia.
-- Desenvolver interfaces com CSS3, utilizando Flexbox, Grid, animações e Media Queries.
-- Praticar JavaScript Vanilla na manipulação do DOM e no gerenciamento de eventos.
-- Implementar lógica de comparação e controle de jogadas em um jogo da memória.
-- Trabalhar com reprodução de áudio e vídeo utilizando recursos nativos do navegador.
-- Organizar estilos e scripts em arquivos separados por responsabilidade.
-- Explorar validações de formulários e atualização dinâmica de conteúdo.
-- Desenvolver uma interface visualmente consistente e adaptável a diferentes telas.
-
-## ✨ Funcionalidades
-
-| Módulo | Funcionalidade | Descrição |
-|---|---|---|
-| 🏠 Home | Apresentação | Página inicial com vídeo de fundo e navegação entre módulos. |
-| 🎬 Trailer | Modal de vídeo | Abertura e fechamento de modal para exibição do trailer. |
-| 🪙 Interação | Bloco de moedas | Animação de moeda acompanhada de efeito sonoro. |
-| 👥 Personagens | Galeria interativa | Apresentação de oito personagens com sons individuais. |
-| 🧠 Jogo | Jogo da memória | 16 cartas organizadas em oito pares. |
-| 🎮 Jogo | Verificação de pares | Comparação das cartas selecionadas e controle de jogadas. |
-| 🔊 Jogo | Feedback sonoro | Sons específicos para acertos, erros, vitória e reinício. |
-| ⭐ Avaliações | Sistema de estrelas | Seleção de notas de uma a cinco estrelas. |
-| 💬 Avaliações | Formulário interativo | Validação de nome, comentário e nota selecionada. |
-| 📝 Avaliações | Comentários dinâmicos | Exibição de novas avaliações sem recarregar a página. |
-
-## ⚙️ Destaques de Engenharia
-
-### 1. JavaScript Vanilla e manipulação do DOM
-
-A aplicação utiliza JavaScript sem frameworks para controlar os elementos da interface, registrar eventos, modificar classes CSS e criar componentes dinamicamente.
-
-### 2. Controle de interação no jogo da memória
-
-O jogo utiliza variáveis de controle para acompanhar as cartas selecionadas e impedir novas jogadas enquanto duas cartas estão sendo verificadas.
-
-A comparação dos pares utiliza o atributo `data-name` e a propriedade `dataset` dos elementos HTML.
-
-### 3. Reprodução e controle de áudio
-
-Os efeitos sonoros são reproduzidos por meio da API nativa `Audio` do navegador.
-
-Em interações específicas, a propriedade `currentTime` é utilizada para reiniciar a reprodução do áudio antes de executá-lo novamente.
-
-### 4. CSS modular
-
-Os estilos estão separados por contexto funcional, permitindo que cada página tenha suas próprias regras de apresentação.
-
-Essa organização facilita a identificação de estilos, a manutenção e a evolução da interface.
-
-### 5. Renderização dinâmica de avaliações
-
-Os comentários são criados por meio de elementos HTML gerados com JavaScript e adicionados dinamicamente ao DOM.
-
-O sistema também atualiza visualmente a classificação por estrelas e valida os campos antes de exibir uma avaliação.
-
-## 🧠 Soluções Técnicas
-
-| Desafio técnico | Solução implementada | Resultado |
-|---|---|---|
-| Controle das cartas | Variáveis de estado e bloqueio temporário do tabuleiro. | Evita selecionar novas cartas enquanto um par está sendo verificado. |
-| Identificação de combinações | Comparação dos atributos `data-name` por meio de `dataset`. | Permite identificar cartas correspondentes. |
-| Distribuição das cartas | Alteração da propriedade CSS `order` com posições aleatórias. | Cria diferentes disposições das cartas no início da partida. |
-| Reprodução de áudio | Utilização de `Audio`, `play()` e `currentTime`. | Permite reproduzir efeitos sonoros durante as interações. |
-| Avaliação por estrelas | Eventos de clique e mouse para atualizar classes CSS. | Apresenta visualmente a nota selecionada. |
-| Inclusão de comentários | Criação de elementos com `document.createElement()` e inserção no DOM. | Atualiza a lista de comentários sem recarregar a página. |
-| Interação com o bloco | Manipulação de classes, visibilidade e temporização. | Produz a animação da moeda acompanhada de áudio. |
-
-## 🖥️ Demonstração Visual
-
-Confira as principais interfaces da aplicação:
-
-<details open>
-<summary><strong>🍄 Visualizar as telas do projeto</strong></summary>
-
-<br>
-
 <div align="center">
 
-| Página Inicial | Galeria de Personagens |
-|:---:|:---:|
-| <img src="./img-super-mario-bros/super-mario-bros-home.png" width="400" alt="Página inicial"> | <img src="./img-super-mario-bros/super-mario-bros-personagens.png" width="400" alt="Galeria de personagens"> |
+<img src="img-super-mario-bros/super-mario-bros-home.png" alt="Página inicial do projeto Super Mario Bros. — O Filme" width="100%">
 
-| Jogo da Memória | Sistema de Avaliações |
-|:---:|:---:|
-| <img src="./img-super-mario-bros/super-mario-bros-jogo.png" width="400" alt="Jogo da memória"> | <img src="./img-super-mario-bros/super-mario-bros-avaliações.png" width="400" alt="Sistema de avaliações"> |
+<br><br>
+
+# 🍄 SUPER MARIO BROS. — O FILME
+
+**Um site temático em 4 fases: trailer, personagens sonoros, jogo da memória e avaliações.**<br>
+HTML5 · CSS3 · JavaScript puro — sem frameworks JavaScript e sem etapa de build.
+
+<p>
+  <img src="https://img.shields.io/badge/PROJETO-FRONT--END-E52521?style=for-the-badge" alt="Projeto front-end">
+  <img src="https://img.shields.io/badge/STATUS-CONCLUÍDO-16A34A?style=for-the-badge" alt="Status: concluído">
+  <img src="https://img.shields.io/badge/LICENÇA-MIT-002677?style=for-the-badge" alt="Licença MIT">
+</p>
+
+<p>
+  <a href="https://paulapsox.github.io/super-mario-bros-o-filme/index.html">
+    <img src="https://img.shields.io/badge/▶_JOGAR_AGORA-E52521?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Acessar o projeto online">
+  </a>
+  <a href="https://github.com/paulaPSOx/super-mario-bros-o-filme">
+    <img src="https://img.shields.io/badge/VER_CÓDIGO-002677?style=for-the-badge&logo=github&logoColor=white" alt="Ver código no GitHub">
+  </a>
+</p>
 
 </div>
 
-</details>
+---
 
-## 🛠️ Tecnologias e Recursos
+## ⚡ Em 30 segundos
 
-| Tecnologia / Recurso | Aplicação no projeto |
-|---|---|
-| **HTML5** | Estruturação das páginas, formulários e elementos multimídia. |
-| **CSS3** | Layouts, Flexbox, Grid, Media Queries, animações e responsividade. |
-| **JavaScript ES6+** | Manipulação do DOM, eventos, validações e lógica do jogo. |
-| **HTML5 Audio** | Reprodução de efeitos sonoros. |
-| **HTML5 Video** | Exibição de vídeo de fundo e conteúdo multimídia. |
-| **Google Fonts** | Integração de fontes para a identidade visual. |
-| **Font Awesome** | Ícones utilizados nos elementos da interface. |
+| | |
+| :-- | :-- |
+| **O que é** | Site multipágina inspirado no filme *Super Mario Bros.*, feito do zero com tecnologias nativas da web. |
+| **Para quê** | Praticar DOM, eventos, lógica de programação, multimídia e responsividade em um projeto completo e publicado. |
+| **Destaque** | Jogo da memória com lógica própria (16 cartas, bloqueio de tabuleiro, efeitos sonoros) e formulário com validação. |
+| **Stack** | HTML5, CSS3 (Flexbox, Grid e media queries), JavaScript (ES6+). |
+| **Online** | [paulapsox.github.io/super-mario-bros-o-filme](https://paulapsox.github.io/super-mario-bros-o-filme/index.html) |
 
-### Ferramentas de desenvolvimento
+---
 
-- **Visual Studio Code:** ambiente de desenvolvimento.
-- **Git:** controle de versão.
-- **GitHub:** hospedagem do repositório.
-- **GitHub Pages:** publicação da aplicação.
+## 🎮 Conheça as 4 fases
 
-**Arquitetura:** aplicação estática executada no navegador, sem framework JavaScript, gerenciador de pacotes ou etapa de build.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://paulapsox.github.io/super-mario-bros-o-filme/index.html">
+        <img src="img-super-mario-bros/super-mario-bros-home.png" alt="Fase 1 — Home" width="100%">
+      </a>
+      <p align="center"><strong>1 · Home</strong><br>Vídeo de fundo, sinopse e trailer em modal.</p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://paulapsox.github.io/super-mario-bros-o-filme/personagens.html">
+        <img src="img-super-mario-bros/super-mario-bros-personagens.png" alt="Fase 2 — Personagens" width="100%">
+      </a>
+      <p align="center"><strong>2 · Personagens</strong><br>Oito personagens, cada um com seu som.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://paulapsox.github.io/super-mario-bros-o-filme/jogo.html">
+        <img src="img-super-mario-bros/super-mario-bros-jogo.png" alt="Fase 3 — Jogo da memória" width="100%">
+      </a>
+      <p align="center"><strong>3 · Jogo da memória</strong><br>16 cartas, 8 pares, tabuleiro embaralhado.</p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://paulapsox.github.io/super-mario-bros-o-filme/avaliacoes.html">
+        <img src="img-super-mario-bros/super-mario-bros-avaliacoes.png" alt="Fase 4 — Avaliações" width="100%">
+      </a>
+      <p align="center"><strong>4 · Avaliações</strong><br>Estrelas, formulário e comentários ao vivo.</p>
+    </td>
+  </tr>
+</table>
 
-## ⚡ Execução Local
+> 💡 **Dica para quem for testar:** clique no bloco do Mario (Home e Avaliações), clique nos personagens para ouvir cada som e tente zerar o jogo da memória.
 
-### Pré-requisitos
+---
 
-- Git instalado.
-- Navegador atualizado.
-- Visual Studio Code (opcional).
+## ⭐ Power-ups (funcionalidades)
 
-### 1. Clone o repositório
+### 🏠 Home
+- Vídeo de fundo em loop e sem áudio.
+- Modal com trailer incorporado do YouTube; ao fechar, o vídeo é interrompido.
+- Bloco do Mario interativo: animação de moeda com efeito sonoro.
 
-```bash
-git clone https://github.com/paulaPSOx/super-mario-bros-o-filme.git
-```
+### 🎭 Personagens
+- Mario, Luigi, Peach, Bowser, Toad, Koopa, Goomba e Yoshi, cada um com imagem, nome e descrição.
+- Clique em um personagem para tocar o som dele.
 
-### 2. Acesse o diretório
+### 🧠 Jogo da memória
+- Tabuleiro gerado dinamicamente via JavaScript.
+- 16 cartas (8 pares) em ordem aleatória a cada partida.
+- Tabuleiro bloqueado durante a checagem de um par, evitando cliques extras.
+- Cartas que formam par ficam desativadas.
+- Sons diferentes para acerto, erro, vitória e reinício.
 
-```bash
-cd super-mario-bros-o-filme
-```
+### ✍️ Avaliações
+- Informações do filme: elenco, sinopse, recepção crítica, bilheteria e detalhes técnicos.
+- Nota de 1 a 5 estrelas, com destaque ao passar o mouse e ao clicar.
+- Validação do formulário: nome, comentário e nota são obrigatórios. O nome aceita até 30 caracteres e o comentário, até 50.
+- Comentários exibidos na hora, do mais novo para o mais antigo, com efeito de entrada.
 
-### 3. Abra a aplicação
+> **Observação:** não há backend. Os comentários existem apenas durante a sessão e somem ao recarregar a página.
 
-**Opção 1 — Navegador**
+---
 
-Abra o arquivo `index.html` diretamente no navegador.
+## 🔧 Por dentro do código
 
-**Opção 2 — Live Server**
+Algumas decisões que tomei durante o desenvolvimento:
 
-No Visual Studio Code, utilize a extensão Live Server e selecione:
+| Tema | Como foi resolvido |
+| :-- | :-- |
+| **Cartas do jogo** | Os pares vêm de um array de imagens e cada carta é criada com `createElement`. A posição de cada carta é sorteada com a propriedade CSS `order`. |
+| **Controle de turno** | Variáveis de estado controlam a jogada (veja abaixo). Com o tabuleiro bloqueado, o jogador não vira uma terceira carta enquanto o par é verificado. |
+| **Sons dos personagens** | Cada `<article>` guarda o caminho do áudio em `data-sound`. Um único laço em JavaScript registra o evento de clique, sem repetir código para cada personagem. |
+| **Trailer** | A `src` do iframe é removida ao fechar o modal e restaurada ao abrir, o que interrompe o vídeo. |
+| **Estrelas** | Os eventos `click`, `mouseover` e `mouseout` alternam classes CSS (`selected` e `hover`) para refletir a nota. |
+| **Responsividade** | Cada página tem seu CSS com media queries, adaptando o layout de telas grandes até celulares pequenos (cerca de 340 px). Flexbox organiza os componentes e Grid monta as grades de personagens e de cartas. |
 
-`Open with Live Server`
+### 🎯 Destaque: a lógica do jogo da memória
 
-**Opção 3 — Servidor local com Python**
+| Variável | Papel na partida |
+| :-- | :-- |
+| `firstCard` | Primeira carta virada na jogada. |
+| `secondCard` | Segunda carta virada na jogada. |
+| `hasFlippedCard` | Indica se já existe uma primeira carta virada. |
+| `lockBoard` | Impede novas jogadas enquanto o par está sendo verificado. |
+| `matchCount` | Conta os pares encontrados; ao chegar a 8, o som de vitória toca. |
 
-```bash
-python -m http.server 3000
-```
+Em caso de erro, as cartas voltam ao verso depois de 1,5 segundo. Em caso de acerto, elas ficam desativadas.
 
-Acesse no navegador:
+---
 
-```text
-http://localhost:3000
-```
+## 🧱 Blocos de construção (tecnologias)
 
-Não é necessário instalar dependências ou executar comandos de build.
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="48" alt="HTML5"><br>
+      <strong>HTML5</strong><br>
+      <sub>Estrutura semântica das páginas.</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="48" alt="CSS3"><br>
+      <strong>CSS3</strong><br>
+      <sub>Layout, animações e responsividade.</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="48" alt="JavaScript"><br>
+      <strong>JavaScript</strong><br>
+      <sub>Lógica, DOM, eventos e áudio.</sub>
+    </td>
+  </tr>
+</table>
 
-## 📂 Arquitetura de Diretórios
+**Complementos:** [Font Awesome](https://fontawesome.com/) (ícones) · [Google Fonts](https://fonts.google.com/) (Open Sans, Poppins e Roboto) · [YouTube Embed](https://www.youtube.com/) (trailer) · [GitHub Pages](https://pages.github.com/) (hospedagem).
+
+---
+
+## 🗂️ Estrutura do projeto
 
 ```text
 super-mario-bros-o-filme/
-│
-├── img-super-mario-bros/          # Capturas de tela e imagens da documentação
-│   ├── img-inspiração.png
-│   ├── super-mario-bros-home.png
-│   ├── super-mario-bros-personagens.png
-│   ├── super-mario-bros-jogo.png
-│   └── super-mario-bros-avaliações.png
-│
+├── index.html            # Home
+├── personagens.html      # Personagens
+├── jogo.html             # Jogo da memória
+├── avaliacoes.html       # Avaliações
+├── img-super-mario-bros/ # Prints e imagem de referência
 ├── src/
-│   │
-│   ├── css/                       # Estilos organizados por página
-│   │   ├── reset.css
-│   │   ├── style.css
-│   │   ├── personagens.css
-│   │   ├── jogo.css
-│   │   └── avaliacoes.css
-│   │
-│   ├── imagens/                   # Recursos gráficos e personagens
-│   │
-│   ├── js/                        # Scripts organizados por funcionalidade
-│   │   ├── index.js
-│   │   ├── personagens.js
-│   │   ├── jogo.js
-│   │   └── avaliacoes.js
-│   │
-│   ├── sounds/                    # Efeitos sonoros em MP3
-│   │
-│   └── video/                     # Vídeo utilizado na aplicação
-│       └── video-mario.mp4
-│
-├── index.html                     # Página inicial
-├── personagens.html               # Galeria de personagens
-├── jogo.html                      # Jogo da memória
-├── avaliacoes.html                # Sistema de avaliações
-├── LICENSE                        # Licença do projeto
-└── README.md                       # Documentação
+│   ├── css/              # reset + um CSS por página
+│   ├── js/               # um JS por página
+│   ├── imagens/          # personagens, logos, bloco e moeda
+│   ├── sounds/           # sons dos personagens e do jogo
+│   └── video/            # vídeo de fundo da Home
+├── LICENSE
+└── README.md
 ```
 
-## 🧩 Organização do Código
-
-A organização dos arquivos segue a separação entre estrutura, apresentação e comportamento da aplicação.
-
-| Arquivo | Responsabilidade |
-|---|---|
-| `index.html` | Estrutura da página inicial e apresentação do projeto. |
-| `personagens.html` | Estrutura da galeria de personagens. |
-| `jogo.html` | Estrutura do jogo da memória. |
-| `avaliacoes.html` | Estrutura das informações do filme e formulário de avaliações. |
-| `src/css/reset.css` | Padronização inicial dos estilos. |
-| `src/css/style.css` | Estilização da página inicial. |
-| `src/css/personagens.css` | Estilização da galeria de personagens. |
-| `src/css/jogo.css` | Estilização do jogo da memória. |
-| `src/css/avaliacoes.css` | Estilização da página de avaliações. |
-| `src/js/index.js` | Controle do modal do trailer e interação com o bloco de moedas. |
-| `src/js/personagens.js` | Eventos de clique e reprodução dos sons dos personagens. |
-| `src/js/jogo.js` | Criação das cartas, embaralhamento, comparação de pares e reinício da partida. |
-| `src/js/avaliacoes.js` | Seleção de estrelas, validação do formulário e exibição dinâmica dos comentários. |
-
-## 📚 Aprendizados
-
-O desenvolvimento deste projeto proporcionou a prática de diferentes conceitos importantes para o desenvolvimento front-end:
-
-- **Manipulação do DOM:** seleção, criação e atualização de elementos HTML com JavaScript.
-- **Eventos JavaScript:** utilização de `addEventListener()` para responder às interações do usuário.
-- **Lógica de programação:** aplicação de condições, funções, variáveis de controle e comparação de dados.
-- **Controle de interação:** gerenciamento das cartas selecionadas e do fluxo de jogadas.
-- **Recursos multimídia:** integração e controle de áudio e vídeo no navegador.
-- **CSS modular:** separação de estilos por página e responsabilidade.
-- **Formulários:** validação de campos e atualização dinâmica das informações.
-- **Responsividade:** utilização de recursos CSS para adaptação da interface a diferentes dimensões de tela.
-
-## 🔍 Testes e Validações
-
-Os seguintes cenários podem ser utilizados para validar o funcionamento da aplicação:
-
-- [ ] Verificar o carregamento das páginas e dos recursos visuais.
-- [ ] Navegar entre os quatro módulos da aplicação.
-- [ ] Abrir e fechar o modal do trailer.
-- [ ] Testar a animação e o áudio do bloco de moedas.
-- [ ] Interagir com os oito personagens e seus efeitos sonoros.
-- [ ] Verificar a identificação de pares no jogo da memória.
-- [ ] Testar o bloqueio temporário do tabuleiro durante as jogadas.
-- [ ] Verificar o funcionamento do botão de reinício.
-- [ ] Testar o preenchimento e a validação do formulário.
-- [ ] Verificar a atualização dinâmica dos comentários.
-- [ ] Inspecionar o console do navegador.
-- [ ] Verificar a apresentação em diferentes tamanhos de tela.
-
-## 🚀 Roadmap de Evolução
-
-Possíveis melhorias para futuras versões:
-
-- [ ] **Persistência de dados:** utilizar LocalStorage para manter avaliações e informações entre sessões.
-- [ ] **Métricas do jogo:** implementar cronômetro, contador de movimentos e recordes.
-- [ ] **Níveis de dificuldade:** adicionar diferentes configurações de cartas.
-- [ ] **Acessibilidade (A11y):** aprimorar a navegação por teclado e os atributos ARIA.
-- [ ] **Experiência mobile:** aperfeiçoar interações e apresentação em dispositivos móveis.
-- [ ] **Internacionalização (i18n):** adicionar suporte a outros idiomas.
-
-## 📄 Licença e Propriedade Intelectual
-
-Este projeto está disponibilizado sob a licença **MIT**.
-
-Consulte o arquivo [LICENSE](./LICENSE) para conhecer os termos de utilização.
-
-**Nota legal:** este é um projeto independente, desenvolvido para fins educacionais e de portfólio. Os personagens, nomes, marcas e elementos visuais relacionados a Super Mario Bros pertencem aos seus respectivos titulares. O projeto não possui vínculo oficial com a Nintendo ou com os produtores do filme.
-
-## 🙌 Créditos
-
-Projeto desenvolvido como parte de um desafio da comunidade **[Dev Em Dobro](https://github.com/devemdobro)** e da **Guild Dev Em Dobro**.
-
-Agradeço à comunidade pelo conteúdo, pelas referências e pelo incentivo à prática e ao desenvolvimento de projetos.
+Cada página tem o seu próprio CSS e o seu próprio JavaScript, com `reset.css` compartilhado, o que mantém cada arquivo com uma responsabilidade clara.
 
 ---
 
-## 👩🏻‍💻 Autora
+## 🚀 Como rodar
+
+Não há dependências nem etapa de build. Escolha uma das opções:
+
+**Opção 1 — Acessar online:** [abrir no GitHub Pages](https://paulapsox.github.io/super-mario-bros-o-filme/index.html).
+
+**Opção 2 — Baixar o ZIP:** clique em **Code → Download ZIP** neste repositório, extraia e abra o `index.html` no navegador.
+
+**Opção 3 — Clonar com Git:**
+
+```bash
+git clone https://github.com/paulaPSOx/super-mario-bros-o-filme.git
+cd super-mario-bros-o-filme
+```
+
+Depois, abra o `index.html` no navegador. Se usar o VS Code, a extensão **Live Server** também funciona.
+
+> Ícones, fontes e o trailer do YouTube dependem de internet. Mantenha as pastas `src/` no lugar original para imagens, sons e vídeo carregarem.
+
+---
+
+## 📚 O que este projeto me ensinou
+
+- Estruturar páginas com HTML semântico e organizar arquivos por responsabilidade.
+- Criar layouts com Flexbox e Grid e adaptá-los com media queries.
+- Manipular o DOM: criar elementos, alternar classes e reagir a eventos.
+- Controlar áudio e vídeo pelo JavaScript.
+- Modelar o estado de um jogo e resolver problemas de lógica, como o bloqueio do tabuleiro.
+- Validar formulários e dar feedback ao usuário.
+- Publicar um projeto com GitHub Pages.
+
+---
+
+## 🏁 Próximas fases
+
+Melhorias que quero fazer, e que **ainda não estão implementadas**:
+
+- [ ] Sanitizar o conteúdo dos comentários (trocar `innerHTML` por `textContent`) para evitar injeção de HTML.
+- [ ] Salvar as avaliações (`localStorage` como primeiro passo e, depois, um backend).
+- [ ] Acessibilidade: navegação por teclado no jogo da memória e foco visível nos elementos interativos.
+- [ ] Trocar o sorteio por `order` por um algoritmo de embaralhamento apropriado (Fisher–Yates).
+- [ ] Reiniciar o jogo sem recarregar a página.
+- [ ] Contador de jogadas e mensagem visual de vitória.
+- [ ] Otimizar imagens, áudios e vídeo para carregar mais rápido.
+
+---
+
+## 🎨 Inspiração e créditos
+
+O ponto de partida foi um layout de referência do desafio, com a estrutura semântica da página (`header`, `nav`, `main`, `div` e `img`) destacada em cores:
+
+<img src="img-super-mario-bros/img-inspiracao.png" alt="Layout de referência do desafio, com a estrutura semântica da página inicial destacada em cores" width="100%">
+
+Projeto desenvolvido a partir de desafios práticos das comunidades [**Dev Em Dobro**](https://github.com/devemdobro) e **Guild Dev Em Dobro**. Obrigada pelo conteúdo e pela oportunidade de praticar.
+
+---
+
+## 📄 Licença e aviso
+
+Código disponibilizado sob a licença **MIT**. Veja o arquivo [`LICENSE`](LICENSE).
+
+Projeto independente, feito para estudo e portfólio. Não possui vínculo, patrocínio ou aprovação da Nintendo, da Illumination, da Universal Pictures ou de qualquer outra detentora de direitos do filme. Personagens, nomes, imagens, vídeos e sons pertencem aos seus respectivos titulares.
+
+---
 
 <div align="center">
 
+## 👩‍💻 Feito por Paula Oliveira
+
+Desenvolvedora full stack em formação, com foco atual em front-end.<br>
+Este projeto marca uma etapa da minha evolução: da prática dos fundamentos à construção de algo completo, interativo e no ar.
+
+<p>
   <a href="https://github.com/paulaPSOx">
-    <img src="https://github.com/paulaPSOx.png" width="110px" alt="Perfil de Paula Oliveira">
-    <br>
-    <strong>Paula Oliveira</strong>
+    <img src="https://img.shields.io/badge/GitHub-paulaPSOx-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub de Paula Oliveira">
   </a>
-
-  <br>
-
-  Desenvolvedora Front-end em formação
-
-  <br><br>
-
-  <a href="https://github.com/paulaPSOx">
-    <img src="https://img.shields.io/badge/GitHub-paulaPSOx-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  <a href="https://www.linkedin.com/in/oliveiraspaula/">
+    <img src="https://img.shields.io/badge/LinkedIn-Paula_Oliveira-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn de Paula Oliveira">
   </a>
-  <a href="https://linkedin.com/in/oliveiraspaula/">
-    <img src="https://img.shields.io/badge/LinkedIn-Paula_Oliveira-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
+</p>
 
-  <br><br>
-
-  **Construindo, aprendendo e evoluindo a cada projeto. 🚀**
-
-  <br>
-
-  <sub>Se este projeto chamou sua atenção, considere deixar uma ⭐ no repositório!</sub>
+**Gostou? Deixe uma ⭐ no repositório. É o meu power-up favorito.** 🍄
 
 </div>
